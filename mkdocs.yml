@@ -1,0 +1,24 @@
+
+site_name: Sluggify Docs
+
+theme:
+  name: material  # modern and stylish theme
+  codehilite:
+    guess_lang: false
+  palette:
+    primary: indigo
+    accent: pink
+  font:
+    text: Roboto
+    code: Roboto Mono
+
+markdown_extensions:
+  - codehilite  # enable syntax highlighting
+  - admonition  # allows note/info/warning boxes
+  - toc:
+      permalink: true
+  - pymdownx.highlight:
+      linenums: true
+  - pymdownx.superfences
+
+

@@ -1,0 +1,672 @@
+
+<!doctype html>
+<html lang="en" class="no-js">
+  <head>
+    
+      <meta charset="utf-8">
+      <meta name="viewport" content="width=device-width,initial-scale=1">
+      
+      
+      
+      
+      
+      
+      <link rel="icon" href="assets/images/favicon.png">
+      <meta name="generator" content="mkdocs-1.6.1, mkdocs-material-9.6.14">
+    
+    
+      
+        <title>Sluggify Docs</title>
+      
+    
+    
+      <link rel="stylesheet" href="assets/stylesheets/main.342714a4.min.css">
+      
+        
+        <link rel="stylesheet" href="assets/stylesheets/palette.06af60db.min.css">
+      
+      
+
+
+    
+    
+      
+    
+    
+      
+        
+        
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,300i,400,400i,700,700i%7CRoboto+Mono:400,400i,700,700i&display=fallback">
+        <style>:root{--md-text-font:"Roboto";--md-code-font:"Roboto Mono"}</style>
+      
+    
+    
+    <script>__md_scope=new URL(".",location),__md_hash=e=>[...e].reduce(((e,_)=>(e<<5)-e+_.charCodeAt(0)),0),__md_get=(e,_=localStorage,t=__md_scope)=>JSON.parse(_.getItem(t.pathname+"."+e)),__md_set=(e,_,t=localStorage,a=__md_scope)=>{try{t.setItem(a.pathname+"."+e,JSON.stringify(_))}catch(e){}}</script>
+    
+      
+
+    
+    
+    
+  </head>
+  
+  
+    
+    
+    
+    
+    
+    <body dir="ltr" data-md-color-scheme="default" data-md-color-primary="indigo" data-md-color-accent="pink">
+  
+    
+    <input class="md-toggle" data-md-toggle="drawer" type="checkbox" id="__drawer" autocomplete="off">
+    <input class="md-toggle" data-md-toggle="search" type="checkbox" id="__search" autocomplete="off">
+    <label class="md-overlay" for="__drawer"></label>
+    <div data-md-component="skip">
+      
+        
+        <a href="#slugify-documentation-edition" class="md-skip">
+          Skip to content
+        </a>
+      
+    </div>
+    <div data-md-component="announce">
+      
+    </div>
+    
+    
+      
+
+  
+
+<header class="md-header md-header--shadow" data-md-component="header">
+  <nav class="md-header__inner md-grid" aria-label="Header">
+    <a href="." title="Sluggify Docs" class="md-header__button md-logo" aria-label="Sluggify Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    <label class="md-header__button md-icon" for="__drawer">
+      
+      <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M3 6h18v2H3zm0 5h18v2H3zm0 5h18v2H3z"/></svg>
+    </label>
+    <div class="md-header__title" data-md-component="header-title">
+      <div class="md-header__ellipsis">
+        <div class="md-header__topic">
+          <span class="md-ellipsis">
+            Sluggify Docs
+          </span>
+        </div>
+        <div class="md-header__topic" data-md-component="header-topic">
+          <span class="md-ellipsis">
+            
+              Slugify – Documentation Edition
+            
+          </span>
+        </div>
+      </div>
+    </div>
+    
+      
+    
+    
+    
+    
+      
+      
+        <label class="md-header__button md-icon" for="__search">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        </label>
+        <div class="md-search" data-md-component="search" role="dialog">
+  <label class="md-search__overlay" for="__search"></label>
+  <div class="md-search__inner" role="search">
+    <form class="md-search__form" name="search">
+      <input type="text" class="md-search__input" name="query" aria-label="Search" placeholder="Search" autocapitalize="off" autocorrect="off" autocomplete="off" spellcheck="false" data-md-component="search-query" required>
+      <label class="md-search__icon md-icon" for="__search">
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M9.5 3A6.5 6.5 0 0 1 16 9.5c0 1.61-.59 3.09-1.56 4.23l.27.27h.79l5 5-1.5 1.5-5-5v-.79l-.27-.27A6.52 6.52 0 0 1 9.5 16 6.5 6.5 0 0 1 3 9.5 6.5 6.5 0 0 1 9.5 3m0 2C7 5 5 7 5 9.5S7 14 9.5 14 14 12 14 9.5 12 5 9.5 5"/></svg>
+        
+        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M20 11v2H8l5.5 5.5-1.42 1.42L4.16 12l7.92-7.92L13.5 5.5 8 11z"/></svg>
+      </label>
+      <nav class="md-search__options" aria-label="Search">
+        
+        <button type="reset" class="md-search__icon md-icon" title="Clear" aria-label="Clear" tabindex="-1">
+          
+          <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M19 6.41 17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z"/></svg>
+        </button>
+      </nav>
+      
+    </form>
+    <div class="md-search__output">
+      <div class="md-search__scrollwrap" tabindex="0" data-md-scrollfix>
+        <div class="md-search-result" data-md-component="search-result">
+          <div class="md-search-result__meta">
+            Initializing search
+          </div>
+          <ol class="md-search-result__list" role="presentation"></ol>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+      
+    
+    
+  </nav>
+  
+</header>
+    
+    <div class="md-container" data-md-component="container">
+      
+      
+        
+          
+        
+      
+      <main class="md-main" data-md-component="main">
+        <div class="md-main__inner md-grid">
+          
+            
+              
+              <div class="md-sidebar md-sidebar--primary" data-md-component="sidebar" data-md-type="navigation" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+
+
+<nav class="md-nav md-nav--primary" aria-label="Navigation" data-md-level="0">
+  <label class="md-nav__title" for="__drawer">
+    <a href="." title="Sluggify Docs" class="md-nav__button md-logo" aria-label="Sluggify Docs" data-md-component="logo">
+      
+  
+  <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24"><path d="M12 8a3 3 0 0 0 3-3 3 3 0 0 0-3-3 3 3 0 0 0-3 3 3 3 0 0 0 3 3m0 3.54C9.64 9.35 6.5 8 3 8v11c3.5 0 6.64 1.35 9 3.54 2.36-2.19 5.5-3.54 9-3.54V8c-3.5 0-6.64 1.35-9 3.54"/></svg>
+
+    </a>
+    Sluggify Docs
+  </label>
+  
+  <ul class="md-nav__list" data-md-scrollfix>
+    
+      
+      
+  
+  
+    
+  
+  
+  
+    <li class="md-nav__item md-nav__item--active">
+      
+      <input class="md-nav__toggle md-toggle" type="checkbox" id="__toc">
+      
+      
+        
+      
+      
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  
+  <span class="md-ellipsis">
+    Slugify – Documentation Edition
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
+      <a href="." class="md-nav__link md-nav__link--active">
+        
+  
+  
+  <span class="md-ellipsis">
+    Slugify – Documentation Edition
+    
+  </span>
+  
+
+      </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Install
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-or-replacing-special-characters-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing or replacing special characters (like !)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of Customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribute
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+      
+    </li>
+  
+
+    
+  </ul>
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+            
+              
+              <div class="md-sidebar md-sidebar--secondary" data-md-component="sidebar" data-md-type="toc" >
+                <div class="md-sidebar__scrollwrap">
+                  <div class="md-sidebar__inner">
+                    
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#table-of-contents" class="md-nav__link">
+    <span class="md-ellipsis">
+      Table of Contents
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#introduction" class="md-nav__link">
+    <span class="md-ellipsis">
+      Introduction
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#how-to-install" class="md-nav__link">
+    <span class="md-ellipsis">
+      How to Install
+    </span>
+  </a>
+  
+    <nav class="md-nav" aria-label="How to Install">
+      <ul class="md-nav__list">
+        
+          <li class="md-nav__item">
+  <a href="#usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Usage
+    </span>
+  </a>
+  
+</li>
+        
+      </ul>
+    </nav>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#basic-usage" class="md-nav__link">
+    <span class="md-ellipsis">
+      Basic Usage
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#explanation" class="md-nav__link">
+    <span class="md-ellipsis">
+      Explanation
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#removing-or-replacing-special-characters-like" class="md-nav__link">
+    <span class="md-ellipsis">
+      Removing or replacing special characters (like !)
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#example-of-customization" class="md-nav__link">
+    <span class="md-ellipsis">
+      Example of Customization
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#locales" class="md-nav__link">
+    <span class="md-ellipsis">
+      Locales
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#extend" class="md-nav__link">
+    <span class="md-ellipsis">
+      Extend
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#contribute" class="md-nav__link">
+    <span class="md-ellipsis">
+      Contribute
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
+                  </div>
+                </div>
+              </div>
+            
+          
+          
+            <div class="md-content" data-md-component="content">
+              <article class="md-content__inner md-typeset">
+                
+                  
+
+
+
+<h1 id="slugify-documentation-edition">Slugify –  Documentation Edition<a class="headerlink" href="#slugify-documentation-edition" title="Permanent link">&para;</a></h1>
+<h2 id="table-of-contents">Table of Contents<a class="headerlink" href="#table-of-contents" title="Permanent link">&para;</a></h2>
+<ul>
+<li><a href="#slugify---documentation-edition">Slugify –  Documentation Edition</a></li>
+<li><a href="#table-of-contents">Table of Contents</a></li>
+<li><a href="#introduction">Introduction</a></li>
+<li><a href="#how-to--install">How to  Install</a><ul>
+<li><a href="#usage"><strong>Usage</strong></a></li>
+</ul>
+</li>
+<li><a href="#basic-usage">Basic Usage</a></li>
+<li><a href="#explanation">Explanation</a></li>
+<li><a href="#removing-or-replacing-special-characters-like-">Removing or replacing special characters (like !)</a></li>
+<li><a href="#example-of-customization">Example of Customization</a></li>
+<li><a href="#remove-characters">Remove Characters</a></li>
+<li><a href="#locales">Locales</a></li>
+<li><a href="#extend">Extend</a></li>
+<li><a href="#contribute">Contribute</a></li>
+</ul>
+<h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
+<p><strong>Slugify</strong> is a powerful tool that converts any string into a URL-friendly slug. This is particularly useful for web applications, blogs, and search engine optimization (SEO). For example, the string "Hello World!" would be transformed into "hello-world".</p>
+<h2 id="how-to-install">How to  Install<a class="headerlink" href="#how-to-install" title="Permanent link">&para;</a></h2>
+<p>There are few ways to install terminall .Open your terminal and run the following command</p>
+<p>It can be installed by using yarn .Enter the following command on your terminal</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>yarn add slugify
+</code></pre></div></td></tr></table></div>
+<p>It can also be installed by using npm:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npm<span class="w"> </span>install<span class="w"> </span>slugify<span class="w"> </span>
+</code></pre></div></td></tr></table></div>
+<h3 id="usage"><strong>Usage</strong><a class="headerlink" href="#usage" title="Permanent link">&para;</a></h3>
+<h2 id="basic-usage">Basic Usage<a class="headerlink" href="#basic-usage" title="Permanent link">&para;</a></h2>
+<ol>
+<li>Import the Slugify Module</li>
+</ol>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="kd">const</span><span class="w"> </span><span class="nx">slugify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;slugify&#39;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<ol>
+<li>Convert a String into a Slug</li>
+</ol>
+<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="kd">const</span><span class="w"> </span><span class="nx">slug</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+ 3. Print the Result to the Console</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slug</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: hello-world</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h2>
+<p>The require('slugify') statement imports the Slugify module into your file, allowing you to use its functionality.</p>
+<p>The slugify('Hello World!') function call transforms the string into a slug by:
+Replacing spaces with dashes (-)</p>
+<p>Converting all letters to lowercase</p>
+<h2 id="removing-or-replacing-special-characters-like">Removing or replacing special characters (like !)<a class="headerlink" href="#removing-or-replacing-special-characters-like" title="Permanent link">&para;</a></h2>
+<p>Customizing Slugify
+You can customize the behavior of Slugify by passing an options object. Here’s how:</p>
+<h2 id="example-of-customization">Example of Customization<a class="headerlink" href="#example-of-customization" title="Permanent link">&para;</a></h2>
+<p>You can customize  or change the setting or  the behavior by passing an options object:</p>
+<p>slugify('Hello World!', {
+  replacement: '-',    // Replace spaces with this character (default: '-')
+  remove: /[*+~.()'"!:@]/g, // Remove these characters (RegEx)
+  lower: true,         // Convert to lowercase (default: false)
+  strict: true,        // Remove anything not allowed in URLs (default: false)
+  locale: 'vi',        // Set locale (for language-specific transliteration)
+  trim: true           // Trim leading/trailing separators (default: true)
+});</p>
+<p>## Remove Characters
+  special characters Can be removed by  using the remove option.
+  slugify('Hello <em>World</em>!', {
+  remove: /[*+~.()'"!:@]/g
+});
+// Output: Hello-World</p>
+<p>For example, to remove <code>*+~.()'"!:@</code> from the result slug, you can use <code>slugify('..', {remove: /[*+~.()'"!:@]/g})</code>.</p>
+<ul>
+<li>If the value of <code>remove</code> is a regular expression, it should be a
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide/Regular_Expressions/Character_Classes">character class</a>
+  and only a character class. It should also use the
+  <a href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/RegExp/global">global flag</a>.
+  (For example: <code>/[*+~.()'"!:@]/g</code>.) Otherwise, the <code>remove</code> option might not
+  work as expected.</li>
+<li>If the value of <code>remove</code> is a string, it should be a single character.
+  Otherwise, the <code>remove</code> option might not work as expected.</li>
+</ul>
+<h2 id="locales">Locales<a class="headerlink" href="#locales" title="Permanent link">&para;</a></h2>
+<p>When you convert a string to a slug, slugify replaces special or foreign characters (like é, ö, or ñ) with their closest English equivalents.Slugify uses a file called charmap.json. This file contains a big list of characters and their English versions.Let’s say charmap.json turns a letter into the wrong English letter for your language. For example, in Vietnamese or Turkish, some characters might have different meanings or sounds.You don’t change charmap.json directly.Instead, you add a custom correction in another file called locales.json</p>
+<p>The main file called <code>charmap.json</code> has a list of all characters and how they should be changed into English letters. If you find a new character that isn't in this file, you should add it there first.</p>
+<p>If you come across a character that is already in <code>charmap.json</code>, but it doesn't translate correctly for your language, you can fix this by adding that character to another file called <code>locales.json</code>. This way, you can change how that character is translated, but only for your specific language.
+You can get the correct language code of your language from <a href="https://en.wikipedia.org/wiki/List_of_ISO_639-1_codes">here</a>.</p>
+<h2 id="extend">Extend<a class="headerlink" href="#extend" title="Permanent link">&para;</a></h2>
+<p>Slugify comes with support for a limited set of Unicode symbols. If you want to add support for additional symbols or override existing ones, you can use the extend method.Out of the box <code>slugify</code> comes with support for a handful of Unicode symbols.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;unicode ♥ is ☢&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// unicode-love-is</span>
+</code></pre></div></td></tr></table></div>
+<p>However you can extend the supported symbols, or override the existing ones with your own:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">slugify</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="s1">&#39;☢&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;radioactive&#39;</span><span class="p">})</span>
+<span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;unicode ♥ is ☢&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// unicode-love-is-radioactive</span>
+</code></pre></div></td></tr></table></div>
+<p>Keep in mind that the <code>extend</code> method extends/overrides the default <code>charMap</code> for the entire process. In case you need a fresh instance of the slugify's <code>charMap</code> object you have to clean up the module cache first:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="ow">delete</span><span class="w"> </span><span class="nx">require</span><span class="p">.</span><span class="nx">cache</span><span class="p">[</span><span class="nx">require</span><span class="p">.</span><span class="nx">resolve</span><span class="p">(</span><span class="s1">&#39;slugify&#39;</span><span class="p">)]</span>
+<span class="kd">var</span><span class="w"> </span><span class="nx">slugify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;slugify&#39;</span><span class="p">)</span>
+</code></pre></div></td></tr></table></div>
+<h2 id="contribute">Contribute<a class="headerlink" href="#contribute" title="Permanent link">&para;</a></h2>
+<p>If you want to contribute to Slugify, here are the steps you can follow:</p>
+<p>Add characters to charmap.json.
+Run tests using:</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>npm test
+</code></pre></div></td></tr></table></div>
+<p>The tests will build the character map in index.js and sort the charmap.json.
+Commit all modified files</p>
+<p>Slugify is a versatile and easy-to-use tool for generating URL-friendly slugs from strings. With its customization options and support for various locales, it can be adapted to meet the needs of different projects. Whether you're a beginner or an experienced developer, Slugify can enhance your web applications and improve SEO.</p>
+
+
+
+
+
+
+
+
+
+
+
+
+                
+              </article>
+            </div>
+          
+          
+<script>var target=document.getElementById(location.hash.slice(1));target&&target.name&&(target.checked=target.name.startsWith("__tabbed_"))</script>
+        </div>
+        
+      </main>
+      
+        <footer class="md-footer">
+  
+  <div class="md-footer-meta md-typeset">
+    <div class="md-footer-meta__inner md-grid">
+      <div class="md-copyright">
+  
+  
+    Made with
+    <a href="https://squidfunk.github.io/mkdocs-material/" target="_blank" rel="noopener">
+      Material for MkDocs
+    </a>
+  
+</div>
+      
+    </div>
+  </div>
+</footer>
+      
+    </div>
+    <div class="md-dialog" data-md-component="dialog">
+      <div class="md-dialog__inner md-typeset"></div>
+    </div>
+    
+    
+    
+      
+      <script id="__config" type="application/json">{"base": ".", "features": [], "search": "assets/javascripts/workers/search.d50fe291.min.js", "tags": null, "translations": {"clipboard.copied": "Copied to clipboard", "clipboard.copy": "Copy to clipboard", "search.result.more.one": "1 more on this page", "search.result.more.other": "# more on this page", "search.result.none": "No matching documents", "search.result.one": "1 matching document", "search.result.other": "# matching documents", "search.result.placeholder": "Type to start searching", "search.result.term.missing": "Missing", "select.version": "Select version"}, "version": null}</script>
+    
+    
+      <script src="assets/javascripts/bundle.13a4f30d.min.js"></script>
+      
+    
+  </body>
+</html>

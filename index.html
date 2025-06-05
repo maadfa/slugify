@@ -326,6 +326,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#remove-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Characters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#locales" class="md-nav__link">
     <span class="md-ellipsis">
       Locales
@@ -465,6 +474,15 @@
 </li>
       
         <li class="md-nav__item">
+  <a href="#remove-characters" class="md-nav__link">
+    <span class="md-ellipsis">
+      Remove Characters
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#locales" class="md-nav__link">
     <span class="md-ellipsis">
       Locales
@@ -521,6 +539,7 @@
 <li><a href="#explanation">Explanation</a></li>
 <li><a href="#customizing">Customizing</a></li>
 <li><a href="#example-of-customization">Example of Customization</a></li>
+<li><a href="#remove-characters">Remove Characters</a></li>
 <li><a href="#locales">Locales</a></li>
 <li><a href="#extend">Extend</a></li>
 <li><a href="#contribute">Contribute</a></li>
@@ -528,7 +547,7 @@
 <h2 id="introduction">Introduction<a class="headerlink" href="#introduction" title="Permanent link">&para;</a></h2>
 <p><strong>Slugify</strong> is a powerful tool that converts any string into a URL-friendly slug. This is particularly useful for web applications, blogs, and search engine optimization (SEO). For example, the string "Hello World!" would be transformed into "hello-world".</p>
 <h2 id="how-to-install">How to  Install<a class="headerlink" href="#how-to-install" title="Permanent link">&para;</a></h2>
-<p>There are few ways to install terminall .Open your terminal and run the following command</p>
+<p>There are few ways to install terminall .Open your terminal and run the following commands</p>
 <p>It can be installed by using yarn .Enter the following command on your terminal</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code>yarn add slugify
 </code></pre></div></td></tr></table></div>
@@ -551,55 +570,17 @@
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">slug</span><span class="p">);</span><span class="w"> </span><span class="c1">// Output: hello-world</span>
 </code></pre></div></td></tr></table></div>
 <h2 id="explanation">Explanation<a class="headerlink" href="#explanation" title="Permanent link">&para;</a></h2>
-<p>The require('slugify') statement imports the Slugify module into your file, allowing you to
- use its functionality.</p>
-<p>The slugify('Hello World!') function call transforms the string into a slug by:
-Replacing spaces with dashes (-)</p>
-<p>Converting all letters to lowercase</p>
+<p>The require('slugify') statement imports the Slugify module into your file and allows you to
+ use it's functionality.</p>
+<p>The slugify('Hello World!') function call transforms the string into a slug by:</p>
+<p>1.Replacing spaces with dashes (-)</p>
+<p>2.Converting all letters to lowercase</p>
 <h2 id="customizing">Customizing<a class="headerlink" href="#customizing" title="Permanent link">&para;</a></h2>
 <p>You can customize the behavior of Slugify by passing an options object. Here’s how:</p>
 <h2 id="example-of-customization">Example of Customization<a class="headerlink" href="#example-of-customization" title="Permanent link">&para;</a></h2>
 <p>You can customize  or change the setting or  the behavior by passing an options object:</p>
-<pre> !!! info 
-```js slugify('Hello World!', {
-
-  replacement: '-',    // Replace spaces with this character (default: '-')
-
-  remove: /[*+~.()'"!:@]/g, // Remove these characters (RegEx)
-
-  lower: true,         // Convert to lowercase (default: false)
-
-  strict: true,        // Remove anything not allowed in URLs (default: false)
-
-  locale: 'vi',        // Set locale (for language-specific transliteration)
-
-  trim: true           // Trim leading/trailing separators (default: true)
-});``` </pre>
-
-<p>## Remove Characters</p>
-<p>Special characters Can be removed by  using the remove option.</p>
-<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
-<span class="normal">2</span>
-<span class="normal">3</span>
-<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;Hello *World*!&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
-<span class="w">  </span><span class="nx">remove</span><span class="o">:</span><span class="w"> </span><span class="sr">/[*+~.()&#39;&quot;!:@]/g</span>
-<span class="p">});</span>
-<span class="c1">// Output: Hello-World</span>
-</code></pre></div></td></tr></table></div>
-<p>For example, to remove <code>*+~.()'"!:@</code> from the result slug, you can use </p>
-<p><div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">remove</span><span class="o">:</span><span class="w"> </span><span class="sr">/[*+~.()&#39;&quot;!:@]/g</span><span class="p">})</span><span class="sb">`.</span>
-</code></pre></div></td></tr></table></div>
-<strong>If You Use a RegEx</strong>
- If you use RegEx,Use only a character class . Write all the characters you want to remove inside square brackets.</p>
-<p><strong>Input</strong></p>
-<p>```js
- const slugify = require('slugify');</p>
-<p>const text = "Hello! This+is*a~test(string)with@special:characters.";</p>
-<p>const result = slugify(text, {
-  remove: /[*+~.()'"!:@]/g,
-  lower: true
-});</p>
-<p>console.log(result);
+<div class="admonition info">
+<p class="admonition-title">Info</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal"> 1</span>
 <span class="normal"> 2</span>
 <span class="normal"> 3</span>
@@ -613,41 +594,73 @@ Replacing spaces with dashes (-)</p>
 <span class="normal">11</span>
 <span class="normal">12</span>
 <span class="normal">13</span>
-<span class="normal">14</span>
-<span class="normal">15</span>
-<span class="normal">16</span>
-<span class="normal">17</span>
-<span class="normal">18</span>
-<span class="normal">19</span>
-<span class="normal">20</span>
-<span class="normal">21</span>
-<span class="normal">22</span>
-<span class="normal">23</span>
-<span class="normal">24</span></pre></div></td><td class="code"><div><pre><span></span><code>**Output**
+<span class="normal">14</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;Hello World!&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
 
-This will result in following output
+<span class="w">  </span><span class="nx">replacement</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;-&#39;</span><span class="p">,</span><span class="w">    </span><span class="c1">// Replace spaces with this character (default: &#39;-&#39;)</span>
 
+<span class="w">  </span><span class="nx">remove</span><span class="o">:</span><span class="w"> </span><span class="sr">/[*+~.()&#39;&quot;!:@]/g</span><span class="p">,</span><span class="w"> </span><span class="c1">// Remove these characters (RegEx)</span>
 
- ```js
- hello-thisisateststringwithspecialcharacters
- ```
+<span class="w">  </span><span class="nx">lower</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">         </span><span class="c1">// Convert to lowercase (default: false)</span>
 
-**If You Use a string**
-If you decide to use string 
-**Input**
+<span class="w">  </span><span class="nx">strict</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="p">,</span><span class="w">        </span><span class="c1">// Remove anything not allowed in URLs (default: false)</span>
 
-```js
- const slugify = require(&#39;slugify&#39;);
+<span class="w">  </span><span class="nx">locale</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;vi&#39;</span><span class="p">,</span><span class="w">        </span><span class="c1">// Set locale (for language-specific transliteration)</span>
 
-const text = &quot;Hello! This is amazing!&quot;;
-
-const result = slugify(text, {
-  remove: &#39;!&#39;,  
-  lower: true
-});
-
-console.log(result);
-</code></pre></div></td></tr></table></div></p>
+<span class="w">  </span><span class="nx">trim</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span><span class="w">           </span><span class="c1">// Trim leading/trailing separators (default: true)</span>
+<span class="p">});</span>
+</code></pre></div></td></tr></table></div>
+</div>
+<h2 id="remove-characters">Remove Characters<a class="headerlink" href="#remove-characters" title="Permanent link">&para;</a></h2>
+<p>Special characters can be removed by  using the remove function.</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">  </span><span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;Hello *World*!&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">remove</span><span class="o">:</span><span class="w"> </span><span class="sr">/[*+~.()&#39;&quot;!:@]/g</span>
+<span class="p">});</span>
+<span class="c1">// Output: Hello-World</span>
+</code></pre></div></td></tr></table></div>
+<p>For example, to remove <code>*+~.()'"!:@</code> from the result slug, you can use </p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;..&#39;</span><span class="p">,</span><span class="w"> </span><span class="p">{</span><span class="nx">remove</span><span class="o">:</span><span class="w"> </span><span class="sr">/[*+~.()&#39;&quot;!:@]/g</span><span class="p">})</span><span class="sb">`.</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>If You Use a RegEx</strong></p>
+<p>If you use RegEx,use only a character class . Write all the characters you want to remove inside square brackets.</p>
+<p><strong>Input</strong>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w">   </span><span class="kd">const</span><span class="w"> </span><span class="nx">slugify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;slugify&#39;</span><span class="p">);</span>
+<span class="w">   </span><span class="kd">const</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello! This+is*a~test(string)with@special:characters.&quot;</span><span class="p">;</span>
+<span class="w">   </span><span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slugify</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">   </span><span class="nx">remove</span><span class="o">:</span><span class="w"> </span><span class="sr">/[*+~.()&#39;&quot;!:@]/g</span><span class="p">,</span>
+<span class="w">   </span><span class="nx">lower</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">});</span>
+<span class="w">   </span><span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
+<strong>Output</strong>
+This will result in following output</p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="nx">hello</span><span class="o">-</span><span class="nx">thisisateststringwithspecialcharacters</span>
+</code></pre></div></td></tr></table></div>
+<p><strong>If You Use a string</strong></p>
+<p>If you decide to use string </p>
+<p><strong>Input</strong></p>
+<div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
+<span class="normal">2</span>
+<span class="normal">3</span>
+<span class="normal">4</span>
+<span class="normal">5</span>
+<span class="normal">6</span>
+<span class="normal">7</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="w"> </span><span class="kd">const</span><span class="w"> </span><span class="nx">slugify</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">require</span><span class="p">(</span><span class="s1">&#39;slugify&#39;</span><span class="p">);</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">text</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s2">&quot;Hello! This is amazing!&quot;</span><span class="p">;</span>
+<span class="kd">const</span><span class="w"> </span><span class="nx">result</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="nx">slugify</span><span class="p">(</span><span class="nx">text</span><span class="p">,</span><span class="w"> </span><span class="p">{</span>
+<span class="w">  </span><span class="nx">remove</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;!&#39;</span><span class="p">,</span><span class="w">  </span>
+<span class="w">  </span><span class="nx">lower</span><span class="o">:</span><span class="w"> </span><span class="kc">true</span>
+<span class="p">});</span>
+<span class="nx">console</span><span class="p">.</span><span class="nx">log</span><span class="p">(</span><span class="nx">result</span><span class="p">);</span>
+</code></pre></div></td></tr></table></div>
 <p><strong>Output</strong></p>
 <p>The output recieved will be without (!)</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">hello</span><span class="o">-</span><span class="k">this</span><span class="o">-</span><span class="nx">is</span><span class="o">-</span><span class="nx">amazing</span>
@@ -661,7 +674,7 @@ console.log(result);
 <p>Slugify comes with support for a limited set of Unicode symbols. If you want to add support for additional symbols or override existing ones, you can use the extend method.Out of the box <code>slugify</code> comes with support for a handful of Unicode symbols.</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;unicode ♥ is ☢&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// unicode-love-is</span>
 </code></pre></div></td></tr></table></div>
-<p>However you can extend the supported symbols, or override the existing ones with your own:</p>
+<p>However, you can extend the supported symbols, or override the existing ones with your own:</p>
 <div class="highlight"><table class="highlighttable"><tr><td class="linenos"><div class="linenodiv"><pre><span></span><span class="normal">1</span>
 <span class="normal">2</span></pre></div></td><td class="code"><div><pre><span></span><code><span class="nx">slugify</span><span class="p">.</span><span class="nx">extend</span><span class="p">({</span><span class="s1">&#39;☢&#39;</span><span class="o">:</span><span class="w"> </span><span class="s1">&#39;radioactive&#39;</span><span class="p">})</span>
 <span class="nx">slugify</span><span class="p">(</span><span class="s1">&#39;unicode ♥ is ☢&#39;</span><span class="p">)</span><span class="w"> </span><span class="c1">// unicode-love-is-radioactive</span>
